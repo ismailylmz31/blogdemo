@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Post</title>
+</head>
+<body>
+<h1>Create New Post</h1>
+<form action="#" th:action="@{/post}" th:object="${post}" method="post">
+    <div>
+        <label>Title</label>
+        <input type="text" th:field="*{title}"/>
+    </div>
+    <div>
+        <label>Content</label>
+        <textarea th:field="*{content}"></textarea>
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+<a href="/">Back to Home</a>
+</body>
+</html>
